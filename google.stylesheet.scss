@@ -1,0 +1,121 @@
+$font_google: Roboto, HelveticaNeue,Arial,sans-serif;
+$font_size: 10pt;
+$font_weight: normal;
+$text_color: #202124;
+$h1_color: #d93025;
+$background_color: #ffffff;
+$top: 30px;
+$right: 35px;
+$bottom: 20px;
+$left: 35px;
+$button_background: #f2f2f2;
+$button_border: 1px solid #f2f2f2;
+$button_text: #5F6368;
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  margin: 36px auto 18px;
+}
+
+.google_search_bar {
+  display: block;
+  padding-left: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 480px;
+  min-height: 44px;
+  border-radius: 24px;
+  border: 1px solid #dfe1e5;
+  font-size: 16px;
+  font-family: arial, sans-serif;
+  box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
+}
+
+%google_button {
+  background-color: $button_background;
+  border: $button_border;
+  border-radius: 4px;
+  color: $button_text;
+  font-family: arial,sans-serif;
+  font-size: 14px;
+  margin: 11px 4px;
+  padding: 0 16px;
+  height: 36px;
+  text-align: center;
+  margin-right: 5px;
+}
+
+.google_buttons_middle {
+  @extend %google_button;
+  display: block;
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.google_buttons_topright {
+  @extend %google_button;
+  float: right;
+  margin-right: 20px;
+}
+
+%advanced {
+  display: inline-block;
+  font-family: arial, sans-serif;
+  font-size: $font_size;
+  line-height: 3.0;
+  margin-right: $right;
+  margin-left: $left;
+}
+
+.advanced_options, .advanced_boxes {
+  @extend %advanced;
+}
+
+.advanced_search_bar {
+  border-radius: 1px;
+  border: 1px solid #d9d9d9;
+  border-top: 1px solid #c0c0c0;
+  font-size: 13px;
+  height: 25px;
+  padding: 1px 8px;
+  width: 120%;
+}
+
+.blue_button {
+  @extend %advanced;
+  background-color: #4d90fe;
+  color: white;
+  border: 1px solid #3079ed;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 2.0;
+  padding: 0 16px;
+  margin-top: 20px;
+  float: right;
+}
+
+%advanced_header {
+  font-family: $font_google;
+  font-weight: $font_weight;
+  margin-right: $right;
+  margin-left: $left;
+}
+
+h1 {
+  @extend %advanced_header;
+  color: $h1_color;
+  font-size: 20px;
+  margin-bottom: $bottom;
+  margin-top: $top;
+}
+
+h2 {
+  @extend %advanced_header;
+  font-size: 16px;
+  padding-top: 40px;
+  padding-bottom: 0px;
+}
